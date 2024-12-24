@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My To-Do List App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="todo-app" aria-labelledby="todo-app__title">
+            <h2 class="todo-app__title">My To-Do List</h2>
+            <div class="todo-app__row">
+                <input type="text" id="input-box" placeholder="Add your text" aria-label="task input">
+                <button onclick="addTask()" class="todo-app__add-button" aria-label="add task">Add</button>
+            </div>
+            <ul id="list-container" class="todo-app__list" role="list">
+                <!-- <li class="checked">Task 1</li>
+                <li>Task 2</li>
+                <li>Task 3</li> -->
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        @Copyright : Josue-Makengo.
+    </footer>
+    
+</body>
+</html>
