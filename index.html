@@ -1,44 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My To-Do List App</title>
+    <meta name="description" content="Application de liste de tâches simple et efficace">
+    <title>Ma Liste de Tâches</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
 <body>
     <div class="container">
-        <div class="todo-app" aria-labelledby="todo-app__title">
-            <h2 class="todo-app__title">My To-Do List</h2>
-            <div class="todo-app__row">
-                <input type="text" id="input-box" placeholder="Add your text" aria-label="task input">
-                <button onclick="addTask()" class="todo-app__add-button" aria-label="add task">Add</button>
-            </div>
-            <ul id="list-container" class="todo-app__list" role="list">
-                <!-- <li class="checked">Task 1</li>
-                <li>Task 2</li>
-                <li>Task 3</li> -->
-            </ul>
-            <!-- <button onclick="openPopup()" class="todo-app__send-button" aria-label="send task">Envoyer</button> -->
-        </div>
+        <main class="todo-app" aria-labelledby="todo-app-title">
+            <h1 id="todo-app-title" class="todo-app__title">Ma Liste de Tâches</h1>
+            
+            <form class="todo-app__form" onsubmit="event.preventDefault(); todoList.addTask();">
+                <div class="todo-app__input-group">
+                    <label for="input-box" class="visually-hidden">Nouvelle tâche</label>
+                    <input 
+                        type="text" 
+                        id="input-box" 
+                        class="todo-app__input"
+                        placeholder="Ajouter une tâche" 
+                        aria-label="Saisir une nouvelle tâche"
+                        required
+                    >
+                    <button 
+                        type="submit" 
+                        class="todo-app__add-button"
+                        aria-label="Ajouter la tâche"
+                    >
+                        Ajouter
+                    </button>
+                </div>
+            </form>
+
+            <section class="todo-app__list-section" aria-label="Liste des tâches">
+                <ul 
+                    id="list-container" 
+                    class="todo-app__list"
+                    aria-label="Tâches en cours"
+                >
+                </ul>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p class="footer__copyright">
+                &copy; <time datetime="2024">2024</time> Josue-Makengo. Tous droits réservés.
+            </p>
+        </footer>
     </div>
-
-    <!-- <div id="popup" class="popup">
-        <div class="popup-content">
-            <span class="close" onclick="closePopup()">&times;</span>
-            <h2>Envoyer mes tâches</h2>
-            <label for="name">Votre nom :</label>
-            <input type="text" id="name" placeholder="Votre nom">
-            <label for="email">Email de l'ami</label>
-            <input type="email" id="email" placeholder="Email de l'ami">
-            <button onclick="sendTask()" class="todo-app__share-button">Partager</button>
-        </div>
-    </div> -->
-
-    <footer>
-        @Copyright : Josue-Makengo.
-    </footer>
-    
 </body>
 </html>
