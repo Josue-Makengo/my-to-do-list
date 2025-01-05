@@ -10,6 +10,7 @@
     min-height: 100vh;
     background: linear-gradient(145deg, #1a2638, #0e2b48, #131b2a, #561b0f, #382527, #1b0907);
     padding: 10px;
+    margin: 0;
 }
 
 .todo-app{
@@ -39,6 +40,7 @@
     padding-left: 20px;
     margin-bottom: 25px;
 }
+
 input{
     flex: 1;
     border: none;
@@ -55,6 +57,7 @@ input{
     font-size: 16px;
     cursor: pointer;
     border-radius: 40px;
+    margin-left: 70%;
 }
 .todo-app__add-button:hover{
     background:#6f6ab5 ;
@@ -108,7 +111,7 @@ ul li span:hover{
 
 footer{
     bottom: 0;
-    margin-top: 22%;
+    margin-top: 19%;
     display: flex;
     justify-content: center;
     width: 100%;
@@ -153,5 +156,8 @@ footer{
         width: 30px;
         height: 30px;
         line-height: 30px;
+    }
+    footer{
+        margin-top: 60vh;
     }
 }
